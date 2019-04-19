@@ -15,3 +15,12 @@ Shubham Tripathi, Amanpreet Singh			Frontend Development
 3. Decided technologies for Backend development	 : Java & JSP
 		    	    Database Management  : MySQL
 		    	    Frontend development : HTML, CSS, Javascript
+
+4. Finalised specific roles (component/functionality wise) for the backend team
+
+	Member Name		Role
+	Yash Agarwal
+	Gaurav Mundhra
+	Deeptonabho Dutta
+
+Work Done: 
