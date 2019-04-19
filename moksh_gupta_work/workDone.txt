@@ -1,0 +1,17 @@
+Date: April 19, 2019 
+
+1. Assigned roles to members of the development team
+
+Development Team Members 				Role
+Moksh Gupta (Leader), Nikhil Gahlot			Database Management
+Gaurav Mundhra, Yash Agarwal, Deeptonabho Dutta 	Backend Development
+Shubham Tripathi, Amanpreet Singh			Frontend Development
+
+2. Assigned task to develop UI for the brochure to the frontend team
+	+ 3 pages: Home page, Shop grid view page, Shop full view page
+	+ Task to be completed by April 20, 2019
+	- Not received data from the Marketing team
+
+3. Decided technologies for Backend development	 : Java & JSP
+		    	    Database Management  : MySQL
+		    	    Frontend development : HTML, CSS, Javascript
