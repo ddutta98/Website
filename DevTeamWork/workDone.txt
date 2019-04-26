@@ -1,5 +1,3 @@
-Date: April 19, 2019 
-
 1. Assigned roles to members of the development team
 
 Development Team Members 				Role
@@ -10,17 +8,19 @@ Shubham Tripathi, Amanpreet Singh			Frontend Development
 2. Assigned task to develop UI for the brochure to the frontend team
 	+ 3 pages: Home page, Shop grid view page, Shop full view page
 	+ Task to be completed by April 20, 2019
-	- Not received data from the Marketing team
+	+ received data from the Marketing team
 
-3. Decided technologies for Backend development	 : Java & JSP
+3. Decided technologies for Backend development	 : JSP & JS
 		    	    Database Management  : MySQL
-		    	    Frontend development : HTML, CSS, Javascript
+		    	    Frontend development : HTML, CSS
 
-4. Finalised specific roles (component/functionality wise) for the backend team
+4. Finalised specific roles (component/functionality wise) for the backend, frontend & database team
 
-	Member Name		Role
-	Yash Agarwal
-	Gaurav Mundhra
-	Deeptonabho Dutta
+5. Gave requirements of the dev team to the marketing team 
 
-Work Done till April 20, 2019: Task in Point(2) completed
+6. Brochure for marketing team is developed
+
+7. ER diagram for DB made
+
+8. Gantt chart/workplan made
+
