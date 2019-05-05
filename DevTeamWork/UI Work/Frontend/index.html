@@ -31,7 +31,23 @@
         #navbar{
             height: 75px;
         }
+        #myInput{
+            padding-left: 200px;
+            padding-right: 200px;
+            color: white;
+        }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#search *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
 
     <title>Document</title>
 </head>
@@ -76,10 +92,12 @@
     </div>
     <br><br>
     <h2 class=display-2 style="text-align:center">Product Categories</h2>
+    <input type="text" id="myInput" placeholder="Search for Categories.." title="Type in a name">
+
     <br><br>
 
     <div class="conatiner">
-        <div class="wrap">
+        <div class="wrap" id="search">
 
             <div class="box one">
                 <a href="shops.html">
@@ -157,6 +175,8 @@
 
         </div>
     </div>
+
+
 
 </body>
 

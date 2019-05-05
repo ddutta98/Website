@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("#myInput1").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#search *").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+            });
+        });
+        </script>
+
     <style>
         #navbar{
             height: 75px;
@@ -50,26 +65,109 @@
     <br>
 
     <div class="row" style="padding-top: 50px">
-        <div class="col-sm-2">
-            <div class="list-group">
-                <h5 class="display-5" style="text-align:center">Categories</h5><br>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple secondary list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple success list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple danger list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple warning list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple info list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple light list group item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple dark list group item</a>
-            </div><br>
+        <div class="col-sm-3" style="padding: 100px">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>Categories</span>
+            </h6>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+            <div class="sidebar-sticky">
+                    <ul class="nav flex-column" id="myUL">
+                        <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-tshirt"></i>
+                            Clothes <span class="sr-only">(current)</span>
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-taxi"></i>
+                            Taxi
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-pills"></i>
+                            Chemist
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i>
+                            Stationary
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-carrot"></i> 
+                           Grocery Store
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-gem"></i>Jewellery Store
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                    <i class="fas fa-coffee"></i>                                 Tea Stalls
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                    <i class="fas fa-cut"></i>                                 Hair Dresser
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                    <i class="fas fa-gift"></i>                                 Gift Shop
+                            </a>
+                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                    <i class="fas fa-shoe-prints"></i>                                 Shoe Store
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                    <i class="fas fa-glasses"></i>                                 Optician
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                    <i class="fas fa-gas-pump"></i>                                 Fuel Station
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                        <i class="fas fa-utensils"></i>                                     Dhaba
+                                </a>
+                            </li>  
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                        <i class="fas fa-bolt"></i>                                     Electrical Shop
+                                </a>
+                            </li>  
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                        <i class="fas fa-hamburger"></i>                                    Fast Food
+                                </a>
+                            </li>  
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                        <i class="fas fa-birthday-cake"></i>                                     Bakery
+                                </a>
+                            </li>  
+
+                    </ul>
+            </div>
         </div>
         <div class="col-sm-8">
-            <div class="content" >
-                <h1 class="heading" style="text-align:center">Category</h1>
+            <div class="content" id="search">
+                <h1 class="heading" style="text-align:center">Shops</h1>
                 <p class="description"></p>
                 <a class="card" href="blank.html">
                 <div class="front" style="background-image: url(images/clothes.jpeg);">
-                <p>Shop Name</p>
+                <p>Kaint Shop</p>
                 </div>
                 <div class="back">
                 <div>
@@ -142,5 +240,24 @@
             </div>
         </div>
     </div>
+
+    <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+            </script>
 </body>
 </html>
